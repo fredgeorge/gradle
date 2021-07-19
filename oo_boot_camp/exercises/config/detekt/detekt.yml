@@ -1,0 +1,40 @@
+console-reports:
+  active: true
+  exclude:
+     - 'ProjectStatisticsReport'
+  #  - 'ComplexityReport'
+     - 'NotificationReport'
+  #  - 'FindingsReport'
+     - 'FileBasedFindingsReport'
+
+output-reports:
+  active: true
+  exclude:
+  # - 'TxtOutputReport'
+   - 'XmlOutputReport'
+   - 'HtmlOutputReport'
+
+complexity:
+  active: true
+  ComplexMethod:
+    active: true
+    threshold: 3
+    ignoreSingleWhenExpression: false
+    ignoreSimpleWhenEntries: false
+    ignoreNestingFunctions: false
+    nestingFunctions: ['run', 'let', 'apply', 'with', 'also', 'use', 'forEach', 'isNotNull', 'ifNull']
+
+naming:
+  active: true
+  MemberNameEqualsClassName:
+    active: false
+    ignoreOverridden: true
+  PackageNaming:
+    active: true
+    excludes: ['**/test/**', '**/androidTest/**', '**/commonTest/**', '**/jvmTest/**', '**/jsTest/**', '**/iosTest/**']
+    packagePattern: '[a-z]+(\.[a-z][A-Za-z0-9_]*)*'
+
+potential-bugs:
+  active: true
+  WrongEqualsTypeParameter:
+    active: false

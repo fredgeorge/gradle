@@ -18,23 +18,23 @@ complexity:
   active: true
   ComplexMethod:
     active: true
-    threshold: 3
-    ignoreSingleWhenExpression: false
-    ignoreSimpleWhenEntries: false
-    ignoreNestingFunctions: false
-    nestingFunctions: ['run', 'let', 'apply', 'with', 'also', 'use', 'forEach', 'isNotNull', 'ifNull']
+    threshold: 3   # Was 15
+  LargeClass:
+    active: true
+    threshold: 100   # Was 600
+  LongMethod:
+    active: true
+    threshold: 5   # Was 60
+  ReplaceSafeCallChainWithRun:
+    active: true   # Was false
 
 naming:
   active: true
   MemberNameEqualsClassName:
-    active: false
+    active: false  # Was true (extension method uses)
     ignoreOverridden: true
-  PackageNaming:
-    active: true
-    excludes: ['**/test/**', '**/androidTest/**', '**/commonTest/**', '**/jvmTest/**', '**/jsTest/**', '**/iosTest/**']
-    packagePattern: '[a-z]+(\.[a-z][A-Za-z0-9_]*)*'
 
 potential-bugs:
   active: true
   WrongEqualsTypeParameter:
-    active: false
+    active: false  # Was true (equals overloading desired)

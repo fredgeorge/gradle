@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
     // Needs exercises to test
-    implementation(project(":exercises"))
+    implementation(project(":lib"))
 
     // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))

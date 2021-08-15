@@ -1,4 +1,4 @@
-# gradle_skeleton
+# kotlin_skeleton_gradle_junit5
 
 Copyright (c) 2021 by Fred George  
 May be used freely except for training; license required for training.
@@ -25,7 +25,7 @@ This implementation uses:
 
 Open the code:
 
-- Download the source code from github.com/fredgeorge
+- Download the source code from github.com/fredgeorge/gradle
     - Clone, or pull and extract the zip
 - Open IntelliJ
 - Choose "Open" (it's a Gradle project)
